@@ -1,6 +1,6 @@
-import { expect } from 'chai';
-import request from 'supertest';
-import app from '../index.js';
+const { expect } = require('chai');
+const request = require('supertest');
+const app = require('../index.js');
 
 describe('Authentication Routes', () => {
   before(async () => {
