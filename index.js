@@ -8,22 +8,18 @@ dotenv.config();
 
 const app = express();
 
-// Middleware to parse JSON and URL-encoded data
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// Session middleware
+const __dirname = path.resolve();
+app.use(express.static(path.join(__dirname, 'public')));
+
 app.use(session({
     secret: process.env.SESSION_SECRET,
     resave: false,
     saveUninitialized: true
 }));
 
-// Serve static files
-const __dirname = path.resolve(); // Get the directory name of the current module
-app.use(express.static(path.join(__dirname, 'public'))); // Serve files from the "public" directory
-
-// Routes
 app.use('/auth', authRoutes);
 
 app.get('/', (req, res) => {
