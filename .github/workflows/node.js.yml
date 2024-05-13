@@ -22,6 +22,10 @@ jobs:
     - name: Clear npm cache and install dependencies
       run: |
         npm cache clean --force
-        npm ci
+        npm install
+    - name: Set up environment variables
+      run: echo "SESSION_SECRET=${{ secrets.SESSION_SECRET }}" >> $GITHUB_ENV
     - name: Run Tests
       run: npm test
+      env:
+        SESSION_SECRET: ${{ secrets.SESSION_SECRET }}
