@@ -1,0 +1,19 @@
+# Dependency directories
+node_modules/
+
+# Environment files
+.env
+
+# Logs
+logs
+*.log
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# Optional editors' directories
+.vscode/
+.idea/
