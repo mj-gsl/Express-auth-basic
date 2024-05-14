@@ -32,6 +32,15 @@ SESSION_SECRET=your-secret-key
 ## Start the server
 npm start
 
+## Open your browser and navigate to http://localhost:3000
+
+Use the following endpoints to register and log in:
+
+Registration: http://localhost:3000/register.html
+
+Login: http://localhost:3000/login.html
+
+
 ## To run the automated tests:
 npm test
 
