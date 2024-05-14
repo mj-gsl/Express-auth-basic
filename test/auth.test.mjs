@@ -2,15 +2,22 @@ import { expect } from 'chai';
 import request from 'supertest';
 import app from '../index.js';
 
-describe('Authentication Routes', () => {
+describe('Authentication Routes', function () {
   let server;
+  let port = 3001; 
 
   before((done) => {
-    server = app.listen(3000, done); // Start the server
+    server = app.listen(port, () => {
+      console.log(`Test server running on port ${port}`);
+      done();
+    });
   });
 
   after((done) => {
-    server.close(done); // Close the server after tests
+    server.close(() => {
+      console.log('Test server stopped');
+      done();
+    });
   });
 
   before(async () => {
