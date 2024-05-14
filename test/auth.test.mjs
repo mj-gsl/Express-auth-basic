@@ -3,6 +3,16 @@ import request from 'supertest';
 import app from '../index.js';
 
 describe('Authentication Routes', () => {
+  let server;
+
+  before((done) => {
+    server = app.listen(3000, done); // Start the server
+  });
+
+  after((done) => {
+    server.close(done); // Close the server after tests
+  });
+
   before(async () => {
     await request(app)
       .post('/auth/register')
