@@ -2,10 +2,10 @@ import { expect } from 'chai';
 import request from 'supertest';
 import app from '../index.js';
 
-describe('Authentication Routes', function () {
-  let server;
-  let port = 3001; 
+let server;
+let port = 3001;
 
+describe('Authentication Routes', function () {
   before((done) => {
     server = app.listen(port, () => {
       console.log(`Test server running on port ${port}`);
@@ -38,5 +38,9 @@ describe('Authentication Routes', function () {
       .post('/auth/login')
       .send({ username: 'user1', password: 'wrongpassword' });
     expect(res.status).to.equal(401);
+  });
+
+  after(() => {
+    process.exit(0); 
   });
 });
