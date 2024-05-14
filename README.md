@@ -48,9 +48,15 @@ npm test
 This project uses GitHub Actions for continuous integration and deployment. The pipeline runs on every push and pull request to the main branch, testing the application with Node.js v22.x.
 
 Project Structure
+
 index.js: Main application file.
+
 auth.js: Authentication routes.
+
 public/: Directory for static HTML files.
+
 test/: Directory for test files.
+
 .github/workflows/node.js.yml: GitHub Actions workflow file.
+
 .env.example: Example environment configuration file.
