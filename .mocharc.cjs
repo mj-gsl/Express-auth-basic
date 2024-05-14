@@ -1,4 +1,4 @@
 module.exports = {
   spec: 'test/**/*.mjs',
-  require: ['esm']
+  require: 'esm'
 };
