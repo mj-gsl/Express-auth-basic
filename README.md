@@ -32,7 +32,7 @@ SESSION_SECRET=your-secret-key
 ## Start the server
 npm start
 
-## Open your browser and navigate to http://localhost:3000
+Open your browser and navigate to http://localhost:3000
 
 Use the following endpoints to register and log in:
 
@@ -44,7 +44,7 @@ Login: http://localhost:3000/login.html
 ## To run the automated tests:
 npm test
 
-## --------- CI/CD Pipeline
+##  CI/CD Pipeline
 This project uses GitHub Actions for continuous integration and deployment. The pipeline runs on every push and pull request to the main branch, testing the application with Node.js v22.x.
 
 Project Structure
